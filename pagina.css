@@ -1,0 +1,343 @@
+:root {
+    --cor-primaria: #4b228d;
+    --cor-secundaria: rgb(114, 38, 10);
+    --cor-terciaria: #333;
+    --cor-fundo: rgb(216, 212, 204);
+    --cor-fundo-escuro: #000;
+    --cor-fundo-claro: rgba(236, 214, 196, 0.53);
+    --cor-branco: #fff;
+    --fonte-principal: "Roboto", sans-serif;
+    --fonte-secundaria: "Qwitcher Grypen", cursive;
+}
+
+.roboto-bold {
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-size: 100%;
+    background-color: var(--cor-fundo);
+    color: var(--cor-terciaria); 
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+}
+
+.cabecalho-imagem {
+    height: 145px;
+}
+
+.cabecalho-menu {
+    display: flex;
+    gap: 45px;
+}
+
+.cabecalho-menu-item {
+    font-family: var(--fonte-principal);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--cor-terciaria); 
+}
+
+.cabecalho-menu-item:focus {
+    outline: 2px solid var(--cor-primaria);
+    background-color: rgba(75, 34, 141, 0.1);
+    color: var(--cor-primaria);
+    border-radius: 4px;
+}
+
+.conteudo {
+    margin-bottom: 48px;
+    border-top: 0.4px solid var(--cor-primaria);
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudo-principal-escrito {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.conteudo-principal-titulo {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 62px;
+    color: blue;
+    margin-top: 48px;
+}
+
+.conteudo-principal-escrito-subtitulo {
+    font-family: var(--fonte-secundaria);
+    font-weight: 70;
+    font-size: 35px;
+    color: var(--cor-secundaria);
+    padding: 10;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;   
+}
+
+form [type="submit"]{
+    height: 10px;
+    width: 40%;
+    background-color: rgb(114, 38, 10);
+    color: #f1f1f1;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+input{
+    margin-top: 20px;
+    height: 20px;
+    padding: 25px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+}
+.conteudo-principal-escrito-botao:hover {
+    background-color: var(--cor-fundo-claro);
+}
+
+.conteudo-principal-imagem {
+    height: 250px;
+    width: 840px;
+}
+
+.conteudo-secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.conteudo-titulo {
+    border-top: 0.4px solid var(--cor-primaria);
+    padding-top: 48px;
+    font-family: var(--fonte-principal);
+    font-size: 30px;
+    font-weight: 700;
+    color: red;
+    margin-bottom: 16px;
+}
+
+.conteudo-secundario-primeiro,
+.conteudo-secundario-segundo {
+    font-family: var(--fonte-secundaria);
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.rodape {
+    padding: 32px;
+    border-top: 0.4px solid var(--cor-primaria);
+}
+
+.rodape-imagem {
+    height: 70px;
+    width: 700px;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+      flex-direction: column;
+      align-items: center;
+      padding: 16px;
+    }
+  
+    .cabecalho-imagem {
+      height: 60px;
+    }
+  
+    .cabecalho-menu {
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .cabecalho-menu-item {
+      font-size: 16px;
+    }
+  
+    .conteudo-principal {
+      flex-direction: column;
+      align-items: center;
+      padding: 0 16px;
+    }
+  
+    .conteudo-principal-titulo {
+      font-size: 36px;
+      text-align: center;
+    }
+  
+    .conteudo-principal-escrito-subtitulo {
+      font-size: 20px;
+      text-align: center;
+    }
+  
+    .conteudo-principal-imagem {
+      width: 100%;
+      height: auto;
+    }
+  
+    .conteudo-principal-escrito-botao {
+      width: auto;
+      height: 30px;
+      font-size: 16px;
+      padding: 8px 16px;
+      text-align: center;
+    }
+  
+    .conteudo-titulo {
+      font-size: 24px;
+      text-align: center;
+    }
+  
+    .rodape-imagem {
+      width: 100%;
+      height: auto;
+    }
+}
+
+/* Estilo para modo alto contraste */
+.alto-contraste {
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-branco);
+}
+
+.alto-contraste * {
+    color: var(--cor-branco);
+    background-color: var(--cor-fundo-escuro);
+}
+
+.alto-contraste img {
+    filter: brightness(0.8);
+}
+
+.contraste-medio {
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-fundo-claro);
+}
+
+.contraste-medio * {
+    color: var(--cor-fundo-claro);
+    background-color: var(--cor-fundo-escuro);
+}
+
+.contraste-medio img {
+    filter: brightness(1);
+}
+
+.contraste-baixo {
+    background-color: var(--cor-fundo);
+    color: var(--cor-terciaria);
+}
+
+.contraste-baixo * {
+    color: var(--cor-terciaria);
+    background-color: var(--cor-fundo);
+}
+
+.contraste-baixo img {
+    filter: brightness(1.2);
+}
+
+/* Estilo para botões de aumentar, diminuir fonte e alterar contraste */
+#diminuir-fonte,
+#aumentar-fonte,
+#alterar-contraste {
+    font-size: 18px;
+    padding: 10px;
+    background-color: #4CAF50; /* Cor verde */
+    color: var(--cor-branco);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#diminuir-fonte:hover,
+#aumentar-fonte:hover,
+#alterar-contraste:hover {
+    background-color: #45a049; /* Cor verde um pouco mais escura */
+}
+
+/* Classes para aumentar e diminuir fonte */
+.fonte-aumentada {
+    font-size: 120%;
+}
+
+.fonte-reduzida {
+    font-size: 80%;
+}
+
+/* Estilo para o submenu */
+.submenu {
+    position: relative;
+    display: inline-block;
+}
+
+/* Esconda a lista do submenu inicialmente */
+.submenu-lista {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para os itens do submenu */
+.submenu-lista a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+/* Cor de fundo ao passar o mouse sobre os itens do submenu */
+.submenu-lista a:hover {
+    background-color: #f1f1f1;
+}
+/* Mostrar a lista do submenu quando o mouse está sobre o item do menu */
+.submenu:hover .submenu-lista {
+    display: block;
+}
+
+
+
+
+
+.icone-carrinho {
+    width: 30px; /* Ajuste o tamanho do ícone */
+    height: auto;
+    vertical-align: middle; /* Alinha com o texto */
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
